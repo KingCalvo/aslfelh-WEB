@@ -1,9 +1,86 @@
 ---
 import BaseLayout from "../layouts/BaseL.astro";
-import { Image } from "astro:assets"; /* Esto es necesario para las imagenes */
-/* import ImageFondo from "@assets/logo2.png"; */ /* Aqui las imagenes */
 ---
 <BaseLayout>
-	<main class="flex">
+	<main class="mt-52">
+		<div class="max-w-4xl mx-auto p-4 bg-white shadow-lg rounded-lg">
+			<h1 class="text-2xl font-bold text-center mb-4">CARRITO DE COMPRAS</h1>
+			<table class="w-full border-collapse border border-gray-300">
+			  <thead>
+				<tr class="bg-gray-200">
+				  <th class="p-2 border border-black">Producto</th>
+				  <th class="p-2 border border-black">Precio</th>
+				  <th class="p-2 border border-black">Cantidad</th>
+				  <th class="p-2 border border-black">Total</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr class="border border-black">
+				  <td class="p-2 flex items-center gap-2 border-r border-black">
+					<input type="checkbox" />
+					<div>
+					  <p class="font-semibold text-green-600">Semilla de Soya.</p>
+					  <p class="text-sm text-gray-600">
+						Rica en proteínas, ideal para alimentos humanos y animales. Crecimiento rápido y adaptable a diversos climas.
+					  </p>
+					</div>
+				  </td>
+				  <td class="p-2 text-center border-r border-black">$100</td>
+				  <td class="p-2 text-center border-r border-black">
+					<input
+					  type="text"
+					  value="1kg"
+					  class="border border-gray-300 rounded p-1 text-center w-16"
+					/>
+				  </td>
+				  <td class="p-2 text-center">$100</td>
+				</tr>
+				<tr class="border border-black">
+				  <td class="p-2 flex items-center gap-2 border-r border-black">
+					<input type="checkbox" />
+					<div>
+					  <p class="font-semibold text-green-600">Semilla de Trigo.</p>
+					  <p class="text-sm text-gray-600">
+						Variedades resistentes para climas templados. Perfecta para producir harinas de alta calidad.
+					  </p>
+					</div>
+				  </td>
+				  <td class="p-2 text-center border-r border-black">$178</td>
+				  <td class="p-2 text-center border-r border-black">
+					<input
+					  type="text"
+					  value="2kg"
+					  class="border border-gray-300 rounded p-1 text-center w-16"
+					/>
+				  </td>
+				  <td class="p-2 text-center">$256</td>
+				</tr>
+			  </tbody>
+			</table>
+		  
+			<div class="flex justify-between items-center mt-4">
+			  <div>
+				<p class="text-lg font-semibold">Promociones</p>
+				<div class="flex items-center gap-2 mt-2">
+				  <input
+					type="text"
+					placeholder="Código de promoción"
+					class="border border-gray-300 rounded p-2 w-52"
+				  />
+				  <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+					Listo
+				  </button>
+				</div>
+			  </div>
+			  <div>
+				<p class="text-xl font-semibold">
+				  Total: <span class="text-green-600">$356.00</span>
+				</p>
+				<button class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 mt-2">
+				  Comprar
+				</button>
+			  </div>
+			</div>
+		</div>
 	</main>
 </BaseLayout>

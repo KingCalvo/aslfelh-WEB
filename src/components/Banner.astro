@@ -3,24 +3,19 @@ import { Image } from "astro:assets";
 import cart from "@assets/shopCart.png"; 
 import lupa from "@assets/lupa.png";
 ---
-<header class="flex items-center justify-between px-56 py-4 border-b border-black bg-green-600 shadow-md">
-    <!-- Buscador -->
-    <div class="flex items-center gap-2">
+<header class="flex flex-wrap items-center justify-between px-4 sm:px-8 md:px-16 lg:px-32 xl:px-56 py-4 border-b border-black bg-green-600 shadow-md">
+    <div class="flex items-center gap-2 w-full sm:w-auto mb-4 sm:mb-0">
         <input type="text" id="buscador" placeholder="Buscar" maxlength="30" 
-            class="bg-white border-b-2 focus:outline-none px-2 py-1 text-sm" />
+            class="flex-grow sm:flex-grow-0 bg-white border-b-2 focus:outline-none px-2 py-1 text-sm" />
         <Image src={lupa} alt="buscar" class="w-6 h-6" />
     </div>
-    
-    <!-- Navegación principal -->
-    <nav class="flex gap-8 font-bold">
-        <a href="/" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 pr-10 text-xl">Inicio</a>
-        <a href="/productos" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 pr-10 text-xl">Productos</a>
-        <a href="/contacto" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 pr-10 text-xl">Contacto</a>
-        <a href="/about" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 text-xl">Conócenos</a>
+    <nav class="flex flex-wrap gap-4 sm:gap-8 font-bold text-center w-full sm:w-auto">
+        <a href="/" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 text-lg sm:text-xl">Inicio</a>
+        <a href="/productos" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 text-lg sm:text-xl">Productos</a>
+        <a href="/contacto" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 text-lg sm:text-xl">Contacto</a>
+        <a href="/about" class="hover:text-white transition-colors duration-200 ease-in-out transform hover:scale-105 text-lg sm:text-xl">Conócenos</a>
     </nav>
-
-    <!-- Carrito -->
-    <div class="flex items-center">
+    <div class="flex items-center w-full sm:w-auto justify-center sm:justify-end mt-4 sm:mt-0">
         <a href="/carrito" class="flex items-center">
             <Image src={cart} alt="carrito de compras" class="w-8 h-8" />
         </a>
