@@ -2,6 +2,36 @@
 import BaseLayout from "../layouts/BaseL.astro";
 import { Image } from "astro:assets";
 import Rojo from "@assets/rojo.jpg";
+import Azul from "@assets/azul.jpg";
+import Amarillo from "@assets/amarillo.jpg";
+
+const slides = [
+  {
+    src: Rojo,
+    alt: "Maíz Rojo",
+    title: "MAÍZ ROJO",
+    description:
+      "El MAÍZ ROJO es una variedad de maíz nativa de América que destaca por su característico color rojo, que proviene de la presencia de compuestos naturales llamados antocianinas.",
+    price: "$200 /kg",
+  },
+  {
+    src: Azul,
+    alt: "Maíz Azul",
+    title: "MAÍZ AZUL",
+    description:
+      "El MAÍZ AZUL tiene un sabor único y es conocido por sus beneficios antioxidantes, además de ser un ingrediente clave en platillos tradicionales mexicanos.",
+    price: "$180 /kg",
+  },
+  {
+    src: Amarillo,
+    alt: "Maíz Verde",
+    title: "MAÍZ VERDE",
+    description:
+      "El MAÍZ VERDE, menos común, es rico en nutrientes y usado en preparaciones frescas y saludables.",
+    price: "$190 /kg",
+  },
+];
+let activeSlide = 0;
 ---
 
 <BaseLayout>
