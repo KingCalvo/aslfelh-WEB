@@ -1,9 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseL.astro";
-import { Image } from "astro:assets"; /* Esto es necesario para las imagenes */
-/* import ImageFondo from "@assets/logo2.png"; */ /* Aqui las imagenes */
+import { Image } from "astro:assets";
+import logo from "@assets/logo.png"; 
 ---
 <BaseLayout>
-	<main class="flex">
-	</main>
+	<div class="flex flex-col items-center mt-28">
+		<h1 class="text-6xl font-bold">AGRICULTURA ASFELH</h1>
+		<Image src={logo} alt="buscar" class="w-auto h-auto" />
+		<h2 class="text-3xl font-semibold">EMPRESA DEDICADA A LA VANGUARDIA EN PRODUCCIÓN DE SEMILLAS DE MAÍZ</h2>
+	</div>
 </BaseLayout>
