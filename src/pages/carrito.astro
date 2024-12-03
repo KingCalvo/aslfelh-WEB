@@ -2,82 +2,88 @@
 import BaseLayout from "../layouts/BaseL.astro";
 ---
 <BaseLayout>
-	<div class="max-w-4xl mx-auto p-10 bg-green-100 border border-green-500 rounded-2xl mt-52">
-		<h1 class="text-2xl font-bold text-center mb-4">CARRITO DE COMPRAS</h1>
-		<table class="w-full border-collapse border border-gray-300">
-			<thead>
-			<tr class="bg-gray-200">
-				<th class="p-2 border border-black">Producto</th>
-				<th class="p-2 border border-black">Precio</th>
-				<th class="p-2 border border-black">Cantidad</th>
-				<th class="p-2 border border-black">Total</th>
+	<div class="max-w-4xl mx-auto px-8 py-12 bg-green-50 border border-green-400 rounded-3xl shadow-lg mt-7">
+		<h1 class="text-3xl font-extrabold text-green-700 text-center mb-8">CARRITO DE COMPRAS</h1>
+		<table class="w-full border-collapse table-fixed shadow-sm">
+		  <thead>
+			<tr class="bg-green-200 text-green-800">
+			  <th class="p-4 border-b border-gray-300 w-1/2 text-lg text-center font-semibold">Producto</th>
+			  <th class="p-4 border-b border-gray-300 w-1/6 text-center text-lg font-semibold">Precio</th>
+			  <th class="p-4 border-b border-gray-300 w-1/6 text-center text-lg font-semibold">Cantidad</th>
+			  <th class="p-4 border-b border-gray-300 w-1/6 text-center text-lg font-semibold">Total</th>
 			</tr>
-			</thead>
-			<tr class="border border-black">
-				<td class="p-2 flex items-center gap-2 border-r border-black">
-					<input type="checkbox" />
-					<div>
-						<p class="font-semibold text-green-600">Semilla de Soya.</p>
-						<p class="text-sm text-gray-600">
-						Rica en proteínas, ideal para alimentos humanos y animales. Crecimiento rápido y adaptable a diversos climas.
-						</p>
-					</div>
-				</td>
-				<td class="p-2 text-center border-r border-black">$100</td>
-				<td class="p-2 text-center border-r border-black">
-					<input
-						type="text"
-						value="1kg"
-						class="border border-gray-300 rounded p-1 text-center w-16"
-					/>
-				</td>
-				<td class="p-2 text-center">$100</td>
-			</tr>
-			<tr class="border border-black">
-				<td class="p-2 flex items-center gap-2 border-r border-black">
-					<input type="checkbox" />
-					<div>
-						<p class="font-semibold text-green-600">Semilla de Trigo.</p>
-						<p class="text-sm text-gray-600">
-						Variedades resistentes para climas templados. Perfecta para producir harinas de alta calidad.
-						</p>
-					</div>
-				</td>
-				<td class="p-2 text-center border-r border-black">$178</td>
-				<td class="p-2 text-center border-r border-black">
-					<input
-						type="text"
-						value="2kg"
-						class="border border-gray-300 rounded p-1 text-center w-16"
-					/>
-				</td>
-				<td class="p-2 text-center">$256</td>
-			</tr>
-		</table>
-		<div class="flex justify-between items-center mt-4">
-			<div>
-				<p class="text-lg font-semibold">Promociones</p>
-				<div class="flex items-center gap-2 mt-2">
-					<input
-					type="text"
-					placeholder="Código de promoción"
-					class="border border-gray-300 rounded p-2 w-52"
-					/>
-					<button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-500 font-bold">
-					Listo
-					</button>
+		  </thead>
+		  <tbody class="bg-white">
+			<tr class="hover:bg-gray-50">
+			  <td class="p-4 border-b border-gray-200">
+				<div class="flex items-center gap-6">
+				  <input type="checkbox" class="w-5 h-5 accent-green-600" />
+				  <div>
+					<p class="font-semibold text-green-700">Semilla de Soya</p>
+					<p class="text-sm text-gray-600">
+					  Rica en proteínas, ideal para alimentos humanos y animales. Crecimiento rápido y adaptable a diversos climas.
+					</p>
+				  </div>
 				</div>
+			  </td>
+			  <td class="p-4 text-center border-b border-gray-200">$100</td>
+			  <td class="p-4 text-center border-b border-gray-200">
+				<input
+				  type="text"
+				  value="1kg"
+				  class="border border-gray-300 rounded-lg p-2 text-center w-20"
+				/>
+			  </td>
+			  <td class="p-4 text-center border-b border-gray-200">$100</td>
+			</tr>
+			<tr class="hover:bg-gray-50">
+			  <td class="p-4 border-b border-gray-200">
+				<div class="flex items-center gap-6">
+				  <input type="checkbox" class="w-5 h-5 accent-green-600" />
+				  <div>
+					<p class="font-semibold text-green-700">Semilla de Trigo</p>
+					<p class="text-sm text-gray-600">
+					  Variedades resistentes para climas templados. Perfecta para producir harinas de alta calidad.
+					</p>
+				  </div>
+				</div>
+			  </td>
+			  <td class="p-4 text-center border-b border-gray-200">$78</td>
+			  <td class="p-4 text-center border-b border-gray-200">
+				<input
+				  type="text"
+				  value="1ton"
+				  class="border border-gray-300 rounded-lg p-2 text-center w-20"
+				/>
+			  </td>
+			  <td class="p-4 text-center border-b border-gray-200">$78,000</td>
+			</tr>
+		  </tbody>
+		</table>
+		<div class="flex justify-between items-center mt-6">
+		  <div>
+			<p class="text-lg font-semibold text-green-700">Promociones</p>
+			<div class="flex items-center gap-3 mt-2">
+			  <input
+				type="text"
+				placeholder="Código de promoción"
+				class="border border-gray-300 rounded-lg p-3 w-64"
+			  />
+			  <button class="bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-600 font-bold shadow-md">
+				Aplicar
+			  </button>
 			</div>
-			<div class="mt-4 bg-green-200 border border-green-500 rounded-xl w-40 h-8 ">
-				<p class="text-xl font-semibold text-center">
-					Total: <span class="text-green-700">$356.00</span>
+		  </div>
+		  <div class="bg-green-100 border border-green-400 rounded-2xl w-80 h-16 flex items-center justify-center shadow-sm mt-5">
+				<p class="text-xl font-semibold text-green-800">
+				Total: <span class="font-extrabold">$78,100.00</span>
 				</p>
-			</div>
+		  </div>
 		</div>
-		<div class="flex flex-col items-center mt-4">
-			<button class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-500 mt-2 font-bold">
-				Comprar
-			</button>
+		<div class="flex justify-center mt-6">
+		  <button class="bg-green-700 text-white px-8 py-3 rounded-lg hover:bg-green-600 font-bold text-lg shadow-md">
+			Comprar
+		  </button>
 		</div>
-	</div>
+	</div>	  
 </BaseLayout>
